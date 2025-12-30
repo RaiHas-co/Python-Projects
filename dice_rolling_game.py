@@ -1,12 +1,12 @@
 import random
 
 while True:
-    print("Roll the dice? (y/n): ")
-    answer = input().lower()
+    answer = input("Roll the dice? (y/n): ").lower()
     if answer == "y":
-        die1 = random.randint(1, 6)
-        die2 = random.randint(1, 6)
-        print(f"Die 1: {die1}, Die 2: {die2}")
+        print("How many dice do you want to roll? (1-6): ")
+        num_dice = int(input())
+        dice_rolls = [random.randint(1, 6) for _ in range(num_dice)]
+        print(f"You rolled {dice_rolls}")
     elif answer == "n":
         print("Thank you for playing!")
         break
